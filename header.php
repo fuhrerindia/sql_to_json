@@ -9,6 +9,7 @@
         }
     }
     function dump_sql($con, $sql){
+        global $kill_mysql_after_dumping;
         $sql_terms = explode(" ", $sql);
         $output = array();
         if ($con){
@@ -44,6 +45,9 @@
         }else{
             $output['message'] = debug_error("Error while connecting to database");
             $output['status'] = "500";
+        }
+        if ($kill_mysql_after_dumping){
+            mysqli_close($con);
         }
         return json_encode($output);
     }
