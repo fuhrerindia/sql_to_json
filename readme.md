@@ -5,8 +5,9 @@ A library for Yugal which input SQL query and returns data from MySQL DB/ MariaD
 - Paste following code in `string.php` file.
   ```php
     //...
-    $debug_mode = true; //'true' if in development mode, 'false' for relase mode.
-    //...
+        $debug_mode = true; //'true' if in development mode, 'false' for relase mode.
+        $kill_mysql_after_dumping = false; //false | true
+  //...
   ```
  ## How to use
  ### dumo_sql
