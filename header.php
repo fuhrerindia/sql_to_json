@@ -1,5 +1,5 @@
 <?php
-    include('string.php');
+    include_once('string.php');
     function debug_error($message){
         global $debug_mode;
         if ($debug_mode){
